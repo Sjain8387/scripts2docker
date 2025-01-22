@@ -4,7 +4,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_PASSWORD: Secret5555
       MYSQL_DATABASE: wordpress
     ports:
       - "3306:3306"
+  wordpress:
+    build: .
+    ports:
+      - "8000:8000"
