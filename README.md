@@ -1,18 +1,17 @@
 # scripts2docker-compose
-
-## exercise to convert `docker compose run` and `docker compose build` to a docker compose file
+## Assignment to convert `docker compose run` and `docker compose build` to a docker compose file
 
 
 TLDR;
 
 ```bash
-./toaster.sh
+./docker-compose.yml
 ```
 
 Then to create the wordpress database:
 
 ```bash
-mysql -u root -h 127.0.0.1 <dbcreate.sql
+mysql -u root -p -h 127.0.0.1 <dbcreate.sql
 ```
 
 To access database use:
@@ -21,6 +20,8 @@ To access database use:
 mysql -u root -h 127.0.0.1
 ```
 
-The assignment is to convert toaster.sh to a docker-compose file. Running `docker-compose up`, creating the database and surfing to port 8000 must bring up the wordpress language choice screen. There are no part marks. Submit the assignment by emailing a link to your repository on github.
+In this assignment, using the first command I ran a MariaDB container with a password and it can be accessed on the port 3306. 
+Using the second command, I built a WordPress Docker latest image in the Dockerfile in the current directory.
+The last command, it starts a container using the WordPress image. I can be accessed on the browser at http://localhost:8000.
 
 
