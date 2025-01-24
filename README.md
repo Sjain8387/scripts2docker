@@ -1,21 +1,33 @@
 # scripts2docker-compose
-## Assignment to convert `docker compose run` and `docker compose build` to a docker compose file
 
+This repository offers a simplified method for utilizing Docker to containerize scripts. It helps automate and build docker images in a very easy way.
 
-Firstly, I cloned and created my GitHub repo https://github.com/Sjain8387/scripts2docker.git using the professor's GitHub link that is https://github.com/rhildred/scripts2docker-compose.
+**Docker features:**
+1. It converts scripts into Docker images.
+2. Docker automates containerization process.
+3. It supports multiple scripting languages making deployment easy and executable.
 
-Secondly, I ran the codespace to start working on the document.
+**Procedure:**
+Clone the repository
+git clone [https://github.com/Sjain8387/scripts2docker.git]
 
-Then, created a docker-compose.yml file and added the latest MariaDB service in detached mode on the port "3306:3306" with the help of docker docs and gave the database username and password and then ran the command:
-docker compose up   //to create the container and run the database.
+Creating a password protected **MariaDB database** on the port 3306:3306
+Create a docker-compose.yml file in the codespace.
 
-After this, I added the latest wordpress image with the help of docker docs into the Dockerfile giving the path as "." that is the current directory and ran te following commands: 
-docker compose up   //to create the image.
+*.*            //path- current directory in the Dockerfile
 
-To configure the image into the database, I used the command:
-mysql -u root -p -h 127.0.0.1 <dbcreate.sql>  //to enter the root password for the MariaDB database.
-docker compose up
-Finally, the image can now be accessed on the browser at (http://localhost:8000.)
+*docker compose up*   //start the container
+
+Building a **WordPress Docker image**
+*docker compose up*
+
+*mysql -u root -p -h 127.0.0.1 <dbcreate.sql>*
+enter the password when prompted.
+
+(http://localhost:8000.)         //Access the WordPress image on the browser.
+
+*docker compose down*         //stop the running container
+
 
 
 
